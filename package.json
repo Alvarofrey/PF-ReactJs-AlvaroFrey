@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://Alvarofrey.github.io/PF-React-AlvaroFrey",
+  "homepage": "https://Alvarofrey.github.io/PF-ReactJs-AlvaroFrey",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
