@@ -14,3 +14,36 @@
     font-size: 20px;
     border: 2px solid;
 }
+.imagenproductos{
+    width: 150px;
+}
+.canpresub{
+    font-size: 15px;
+    font-weight: bold;
+}
+.terminarcompra{
+    text-decoration: none;
+    color: Black;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid;
+    background-color: #ff6913;
+
+}
+.irinicio{
+    text-decoration: none;
+    background-color: #ff6913;
+    font-weight: bolder;
+    color: black;
+}
+.iniciarsesion{
+    margin-right: 10px;
+    background-color: #ff6913;
+    font-weight: bolder;
+}
+.Regresar{
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #ff6913;
+    font-weight: bolder;
+}

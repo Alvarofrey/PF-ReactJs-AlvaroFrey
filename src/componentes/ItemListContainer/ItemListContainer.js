@@ -1,37 +1,58 @@
 import { useState, useEffect } from 'react';
-import { getProducts, getProductsByCategory } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import { getDocs, collection, query, where } from 'firebase/firestore';
+import { db } from '../../services/firebase/firebaseConfig';
 
-const ItemListContainer = ( {greeting}) =>    {
+
+const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([]);
-
-    const {categoryId} = useParams();
+    const [loading, setLoading] = useState(true);
+    const { categoryId } = useParams();
+    
 
     useEffect(() => {
-        const fetchProducts = async () => {
-          try {
-            let response;
-            if (categoryId) {
-              response = await getProductsByCategory(categoryId);
-              setProducts(response);
-            } else {
-              response = await getProducts();
-            }
-            setProducts(response);
-          } catch (error) {
-            console.log("Error fetching products:", error);
-          }
-        };
+        setLoading(true);
+
+        const collectionRef = collection(db, "items");
+        let filteredCollectionRef;
     
-        fetchProducts();
-      }, [categoryId]);
-    
+        if (categoryId) {
+          filteredCollectionRef = query(
+            collectionRef,
+            where("category", "==", categoryId)
+          );
+        } else {
+          filteredCollectionRef = collectionRef;
+        }
+
+        getDocs(filteredCollectionRef)
+            .then((response) => {
+                const productsAdapted = response.docs.map((doc) => {
+                    const data = doc.data();
+                    return { id: doc.id, ...data };
+                });
+                setProducts(productsAdapted);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, [categoryId]);
+
     return (
         <div>
-            <h1>{greeting}</h1>
-            <ItemList key={products.id} products={products}/>
+            <h1>{categoryId ? `Categoria: ${categoryId}` : "Todos los productos"}</h1>
+            {loading ? (
+                <p>Cargando productos...</p>
+            ) : (
+                <ItemList products={products} />
+            )}
         </div>
     );
+    
 };
+
 export default ItemListContainer;

@@ -5,15 +5,15 @@ import "../Item/Item.css"
 const Item = ({id,name,img,price,stock}) => {
 
     return (
-        <div className="Items">
-        <article>
+        <div className="listatodoslosproductos">
+        <article className="Items"> 
             <header>
                 <h2>
                     {name}
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} />
+                <img className="imagenproductos" src={img} alt={name} />
             </picture>
             <section>
             <p>
