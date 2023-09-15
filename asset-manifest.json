@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/css/main.e3a5daaf.css",
+    "main.js": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/js/main.ab11d8ca.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/js/787.28cb0dcd.chunk.js",
+    "static/media/cargandoOrden.gif": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/media/cargandoOrden.ad542e73e2e605af5bb8.gif",
+    "static/media/ordenDeleted.png": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/media/ordenDeleted.3574888bb96d14265a8e.png",
+    "index.html": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/index.html",
+    "static/media/cart.svg": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/media/cart.30255b02b4d20766b4123ccb0aa6df55.svg",
+    "main.e3a5daaf.css.map": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/css/main.e3a5daaf.css.map",
+    "main.ab11d8ca.js.map": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/js/main.ab11d8ca.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Alvarofrey/PF-ReactJs-AlvaroFrey.git/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3a5daaf.css",
+    "static/js/main.ab11d8ca.js"
+  ]
+}
