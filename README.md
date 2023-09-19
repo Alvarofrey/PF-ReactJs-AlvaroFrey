@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hola mi Nombre es Alvaro frey, Realize mi curso de ReactJs en "CoderHouse". Esta app esta realizada con ReactJs, son de productos de Natura en Stock Real, lo realize de una manera sencilla porque es mi primera vez con ReactJs, Espero les guste. En un Futuro agregare todos los productos que tengo en stock.
 
 ## Available Scripts
 
